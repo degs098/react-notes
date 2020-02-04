@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import { connect } from 'react-redux';
+import { bindActionCreators } from '../../../../../AppData/Local/Microsoft/TypeScript/3.6/node_modules/redux';
+import Comments from './components/comments/comments';
+import 'semantic-ui-css/semantic.min.css';
+import { getComments } from './components/comments/actions';
+import 'moment/locale/es';
+import { getUsers } from './actions';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export class App extends Component {
+
+  componentDidMount(){
+    const { dispatchGetComments, dispatchGetUsers } = this.props;    
+    dispatchGetComments();
+    dispatchGetUsers();
+  }
+
+  render() {         
+    const { comments, users } = this.props;    
+    return (
+      <div className="App">        
+        <Comments comments={comments} users={users}></Comments>        
+      </div>
+    )
+  }
 }
 
-export default App;
+const mapStateToProps = ({ commentsReducer: { comments } }) => ({
+  comments  
+});
+
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators({    
+    dispatchGetComments: getComments,
+    dispatchGetUsers: getUsers    
+  }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)

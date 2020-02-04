@@ -1,0 +1,60 @@
+{
+    "notes": [
+        {
+            "id": 312312,
+            "initials": "MC",
+            "author": "Monica Castillo",
+            "content": "Esta es una nota creada por Monica",
+            "replies": [
+                {
+                    "id": 4123123,
+                    "initials": "DG",                    
+                    "author": "Daniel Gallego",
+                    "content": "Esta es la respuesta al comentario de Monica",
+                    "replies": [],
+                    "createdTimestamp": 1580608240
+                }
+            ],
+            "createdTimestamp": 1580608240
+        },
+        {
+            "id": 4293201,
+            "initials": "AA",
+            "author": "Alvaro Agudelo",
+            "content": "Recordar la planeación de periodo",
+            "replies": [],
+            "createdTimestamp": 1580608240
+        },
+        {
+            "id": 4290192,
+            "initials": "CR",
+            "author": "Cristhian Rios",
+            "content": "Enterado!",
+            "replies": [],
+            "createdTimestamp": 1580608240
+        }
+    ],
+
+    "users": [
+        {
+            "id": 984193,
+            "display": "Monica Castillo",
+            "username": "mocasti"
+        },
+        {
+            "id": 8958394,
+            "display": "Daniel Gallego",
+            "username": "daegalle"
+        },
+        {
+            "id": 942093,
+            "display": "Alvaro Agudelo",
+            "username": "alagudes"
+        },
+        {
+            "id": 794023,
+            "display": "Diego Romero",
+            "username": "diarome"
+        }
+    ]
+}

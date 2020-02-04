@@ -1,0 +1,15 @@
+.comment-avatar {
+    width: 52px;
+    height: 52px;
+    background-color: #ccc;
+    border-radius: 50%;
+    font-family: sans-serif;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    margin: 0 10px 0 0;
+    float: left;
+}
