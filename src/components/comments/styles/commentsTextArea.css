@@ -1,6 +1,7 @@
 .comment-textarea textarea {
     position: relative !important;
     overflow: auto !important;
+    line-height: inherit !important;
 }
 
 .comments-textarea__highlighter{
